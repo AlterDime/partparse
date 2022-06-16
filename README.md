@@ -1,6 +1,6 @@
 # lambda-multipart-parser
 ```
-npm install lambda-multipart-parser --save
+npm install partparse --save
 ```
 
 ## Introduction
@@ -28,7 +28,7 @@ This nodejs module will parse the multipart-form containing files and fields fro
 
 ## Usage
 ```
-const parser = require('lambda-multipart-parser');
+const parser = require('partparse');
 
 const result = await parser.parse(event);
 console.log(result.files);
@@ -38,8 +38,6 @@ console.log(result.files);
 Please make sure to enable the "Use Lambda Proxy integration" in API Gateway method Integration request. 
 
 If decided not to enable it for some reason, make sure to pass the required Lambda event parameters in Integration Request -> Mapping Templates section, such as body, headers and isBase64Encoded flag.
-
-Sample Lambda and API Gateway implementation with Cloudformation can be found in [here](http://francismeynard.github.io/aws-upload-document-service).
 
 ## Test
 ```
