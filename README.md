@@ -1,4 +1,4 @@
-# lambda-multipart-parser
+# partparse - a plugin to parse multipart form data
 ```
 npm install partparse --save
 ```
